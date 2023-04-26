@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}PCT Script Creator{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="static/css/styles.css" xmlns="http://www.w3.org/1999/html">
+
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <a href="{{ url_for('home') }}"><button class="home"><i class="fa fa-home"></i> Home</button></a>
+    <h1>Script Creator</h1>
+</div>
+		<div class="container">
+				<h4>COASP/Architect/DNA - Decommission</h4>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+         <span class="{{ category }}">{{ message }}</span>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+					{% for field, errors in form.errors.items() %}
+    <small class="error">
+        <p>{{ ', '.join(errors) }}</p>
+    </small>
+  {% endfor %}
+
+        <form method="POST" action="{{ url_for('tn_decommission') }}" novalidate>
+			    {{ form.csrf_token }}
+			    <p>
+				{{ form.home_id.label }}<br>{{ form.home_id(size=50, type="number", pattern="[0-9]") }}
+			    </p>
+			    <p>
+				{{ form.fi_name.label }} <br> {{ form.fi_name(size=50) }}
+			    </p>
+			   <p>
+			{{ form.bug_id.label }} <br>  {{ form.bug_id(size=50, type="number", pattern="[0-9]") }}
+				   <input type=submit value="Generate Script" class="submit">
+			    </p>
+			</form>
+			</div>
+{% endblock %}

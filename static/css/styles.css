@@ -1,0 +1,110 @@
+.header{
+ height: 200px;
+ background-color: #EEEEEE;
+}
+
+
+h1{
+ color: #FF6701;
+ text-align: center;
+ padding-top: 25px;
+}
+
+p, .error, .success {
+ font-weight: bold;
+}
+
+.success {
+  color: RoyalBlue;
+}
+
+.error{
+  color: #FF6701;
+}
+
+h3{
+ color: #FF6701;
+ text-align: center;
+ padding-top: 50px;
+}
+
+h4{
+ color: #FF6701;
+ text-align: center;
+ padding-top: 25px;
+ padding-bottom: 25px;
+}
+
+.underline{
+ height: 5px;
+ background-color: #FF6701;
+}
+
+
+.btn-primary {
+    width: 126px;
+    margin-top: 25px;
+    color: black;
+    background-color: #EEEEEE;
+    border-color: #285e8e;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #FF6701;
+    border-color: #285e8e;
+}
+
+
+.btn-download {
+  margin-top: 100px;
+  background-color: #FF6701;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn-download:hover {
+  background-color: RoyalBlue;
+}
+
+
+.home {
+  background-color: #FF6701; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.home:hover {
+  background-color: RoyalBlue;
+}
+
+
+.drop-field{
+width: 150px;
+height: 30px;
+}
+
+
+.submit:hover {
+  background-color: RoyalBlue;
+  color: white;
+}
+
+.submit{
+    color: #FF6701;
+}
+
+
+.split-screen{
+margin-right : 150px;
+}

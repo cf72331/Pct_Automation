@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}PCT Script Creator{% endblock %}
+
+{% block styles %}
+{{ super() }}
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{% endblock %}
+
+{% block content %}
+<div class="header">
+    <a href="{{ url_for('home') }}"><button class="home"><i class="fa fa-home"></i> Home</button></a>
+    <h1>Script Creator</h1>
+</div>
+
+<div class="container">
+<div class="form-row text-center">
+    <div class="col-12">
+    <a href="{{ url_for('download', download_filename=filename) }}"><button class="btn-download" style="width:50%"><i class="fa fa-download"></i> Download</button></a>
+</div>
+ </div>
+
+</div>
+{% endblock %}
